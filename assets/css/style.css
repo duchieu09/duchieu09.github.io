@@ -12,9 +12,15 @@ html{
 }
 
 #header{
+    position: fixed;
     display: flex;
+    top: 0;
+    right: 0;
+    left: 0;
     height: 60px;
     background-color: #1f203a;
+    z-index: 1000;
+   
 }
 #logo{
     width: 70px;
@@ -37,10 +43,12 @@ html{
 
 #nav li{
     position: relative;
+   
 }
 
 #nav >li> a{
     text-transform: uppercase;
+   
 }
 
 #nav li a{
@@ -49,6 +57,7 @@ html{
     line-height: 60px;
     padding: 0 20px;
     display: block;
+    transition: all .4s;
 }
 
 #nav li:hover .subnav{
@@ -59,6 +68,7 @@ html{
 #nav .subnav LI:hover a{
     color: #000;
     background-color: rgb(190, 180, 238);
+    
 }
 #nav .subnav{
     display: none;
@@ -68,16 +78,61 @@ html{
     background-color:  #1f203a;
     box-shadow: 0 0 10px rgba(5, 4, 4, 0.5);
 }
+
 #nav .subnav a{
     padding: 0 14px;
     line-height: 40px;
 }
 
-
-#content{
-    
+#header #menu-btn{
+    position: absolute;
+    right: 0;
+    width: 70px;
+    cursor: pointer;
+  
+}
+#menu-btn .menu-icon{
+    font-size: 18px;
+    color: white;
+    display: flex;
+    line-height: 60px;
+    justify-content: center;
 }
 
+#content{
+    margin-top: 60px;
+}
+#personal{
+    position: relative;
+    padding-top: 20%;
+    background: linear-gradient(0, rgba(0,255,255, 0.5),rgba(255,255,0,0.5));
+}
+
+#personal #personal-img{
+    position: absolute;
+    bottom: -15%;
+    left: 50%;
+    width: 238px;
+    height: 238px;
+    transform: translateX(-50%);
+    background-image: url(/assets/images/hieu.jpg);
+    background-repeat: no-repeat;
+    border-radius: 50% !important;
+    border:7px solid rgb(252, 206, 252);
+   
+}
+
+#information{
+    position: relative;
+    margin-top: 7%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.text-description{
+    width: 500px;
+    margin: 0 auto;
+}
 #footer{
     
 }
