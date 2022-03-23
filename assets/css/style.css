@@ -101,6 +101,7 @@ html{
 
 #content{
     margin-top: 60px;
+    
 }
 #content .personal{
     position: relative;
@@ -120,11 +121,11 @@ html{
     background-repeat: no-repeat;
     border-radius: 50%;
     border:7px solid rgb(255, 255, 255);
-   
 }
+
 #content .information{
     width: 550px;
-    padding: 64px 0;
+    padding: 60px 0 30px 0;
     margin-left: auto;
     margin-right: auto;
 }
@@ -142,41 +143,277 @@ html{
 } 
 #content .u-text{
     text-align: center;
-    margin-top: 20px;
-    border-width: 2px;
-    border-bottom: 1px solid #000;
+    text-transform: uppercase;
+    width: 140px;
+    letter-spacing: 2px;
+    margin: 40px auto 0px auto;
+    position: relative;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 1rem;
+
+} 
+#content .u-text::after{
+    content: "";
+    position: absolute;
+    width: 81%;
+    height: 2px;
+    background-color: #000;
+    bottom: 0%;
+    left: 9%;
+    transition: all 500ms ease;
+}
+#content .u-text:hover::after{
+    width: 0%;
+    left: 50%;
 }
 
 #content .layout-list{
     display: flex;
     justify-content: space-around;
     width: 1040px;
-    padding: 64px 0;
+    padding: 30px 0;
     margin-left: auto;
     margin-right: auto;
 }
+
 #content .layout-item img{
     width: 455px;
+    
 }
 #content .u-text-1{
-    margin: 15px 0;
+    margin-top: 25px;
     font-size: 3rem;
     font-weight: 300;
 }
 #content .auto-input{
     font-weight: 500;
+    color: #1f203a;
 }
-/* #information{
+#content .u-image-1{
+    margin-top: 45px;
+    height: 487px;
+}
+#content .u-text-2{
+    margin: 20px 0px;
+
+}
+#content .u-button-style{
     position: relative;
-    margin-top: 7%;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+    border: 2px solid gray;
+    padding: 5px 22px;
+    margin-top: 15px;
+
 }
-#information .text-header{
-    font-weight: 500;
-    font-size: 32px;
+#content .u-button-style::before{
+    content: "";
+    position: absolute;
+    transition-delay: 0.5s;
+    transform: scaleY(0);
+    transition: 0.5s ease-in-out;
 }
-#footer{
+#content .u-button-style:hover::before{
+    top: 6px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% - 12px);
+    background: #fff;
+    transform: scaleY(1);
     
 }
+#content .u-button-style::after{
+    content: "";
+    position: absolute;
+    transform: scaleX(0);
+    transition: 0.5s ease-in-out;
+}
+#content .u-button-style:hover::after{
+   
+    left: 6px;
+    top: -2px;
+    height: calc(100% + 4px);
+    width: calc(100% - 12px);
+    background: #fff;
+    transform: scaleX(1);
+}
+#content .u-button-style span{
+    position: relative;
+    z-index: 3;
+}
+#content .details{
+    width: 1040px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#content .line{
+    display: block;
+    width: 94%;
+    border-bottom: 2px solid #706b6b;
+    margin: 30px;
+    text-align: center;
+}
+
+#content .u-text-3{
+    font-size: 2rem; 
+    text-align:center; 
+    position:relative; 
+    top:18px; 
+    padding:0 15px; 
+    display:inline-block; 
+    background:white;
+    letter-spacing: 2px;
+}
+
+#content .detail-row{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+#content .detail-row-1{
+    width: 455px;
+}
+#content .title{
+    position: relative;
+    margin: 15px 0 15px 15px;
+}
+#content .title::after{
+    position: absolute;
+    content: "";
+    width: 6px;
+    height: 17px;
+    background-color: #000;
+    top: 4%;
+    left: -3%;
+}
+#content .detail-row-1 h4{
+    margin-bottom: 10px;
+}
+#content .experience-1{
+    margin-bottom: 10px;
+}
+#content .detail-row p{
+    line-height: 1.5;
+}
+#content .Education span{
+    position: relative;
+}
+#content .Education .background-word::after{
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 12px;
+    top: 3px;
+    margin-left: 41px;
+    background-color: #1f203a;
+}
+#content .Education .background-word::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 12px;
+    top: 3px;
+    margin-left: 41px;
+    background-color: #b2b2b2;
+}
+#content .Education .background-html::after{
+    position: absolute;
+    content: "";
+    width: 190px;
+    height: 12px;
+    top: 3px;
+    margin-left: 59px;
+    background-color: #1f203a; 
+}
+#content .Education .background-html::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 12px;
+    top: 3px;
+    margin-left: 59px;
+    background-color: #b2b2b2;
+}
+#content .Education .background-react::after{
+    position: absolute;
+    content: "";
+    width: 60px;
+    height: 12px;
+    top: 3px;
+    margin-left: 103px;
+    background-color: #1f203a;  
+}
+#content .Education .background-react::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 12px;
+    top: 3px;
+    margin-left: 103px;
+    background-color: #b2b2b2;  
+}
+#content .Education .background-boostrap::after{
+    position: absolute;
+    content: "";
+    width: 100px;
+    height: 12px;
+    top: 3px;
+    margin-left: 99px;
+    background-color: #1f203a; 
+}
+#content .Education .background-boostrap::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 12px;
+    top: 3px;
+    margin-left: 99px;
+    background-color: #b2b2b2;   
+}
+#content .Education .background-php::after{
+    position: absolute;
+    content: "";
+    width: 80px;
+    height: 12px;
+    top: 3px;
+    margin-left: 130px;
+    background-color: #1f203a;   
+}
+#content .Education .background-php::before{
+    position: absolute;
+    content: "";
+    width: 250px;
+    height: 12px;
+    top: 3px;
+    margin-left: 130px;
+    background-color: #b2b2b2;  
+}
+
+#footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:  linear-gradient(0deg, rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(https://images03.nicepage.com/c461c07a441a5d220e8feb1a/1d7522477e8255a697949ad4/w4-min.jpg?version=);
+    height: 413px;
+}
+#footer .bottom-container{
+    width: 700px;
+    min-height: 150px;
+    text-align: center;
+    color: #fff;
+}
+#footer .bottom-text{
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+#footer .item-icon{
+   margin: 20px 0;
+   font-size: 2rem;
+}
+#footer .item-icon i{
+  margin: 0 7px;
+  cursor: pointer;
+}
+
