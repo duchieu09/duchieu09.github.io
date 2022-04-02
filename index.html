@@ -9,6 +9,8 @@
      <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/lightbox.css" />
+    <link rel="stylesheet" href="./assets/css/responsive.css" />
     <title>My Cv</title>
 </head>
     <div id="wrapper">
@@ -18,34 +20,37 @@
                     <img class="logo-image" src="https://images03.nicepage.com/c461c07a441a5d220e8feb1a/a3e31381c306570fbc13a407/Untitled-2.png" alt="">
                 </div>
             <!-- End-logo -->
+
             <!-- Begin-nav -->
                 <ul id="nav">
-                    <li><a href="">Trang chủ</a></li>
+                    <li><a href="#">Trang chủ</a></li>
+                    
+                    <li><a href="#detail">Thông Tin</a></li>
                     <li>
-                        <a href="">
+                        <a href="#">
                             Sản phẩm
                             <i class="fa-solid fa-angle-down"></i>
                         </a>
                         <ul class="subnav">
-                            <li><a href="">Extra</a></li>
-                            <li><a href="">Media</a></li>
-                            <li><a href="">Facebook</a></li>
+                            <li><a href="#">Extra</a></li>
+                            <li><a href="#">Media</a></li>
+                            <li><a href="#">Facebook</a></li>
                         </ul>
                     </li>
-                    <li><a href="">Liên hệ</a></li>
                 
                 </ul>
             <!-- End-nav-->
+            
             <!-- Begin-icon-menu-->
                 <div id="menu-btn">
                     <i class="menu-icon fa-solid fa-bars"></i>
                 </div>
             <!-- End-icon-menu-->
         </div>
-
         <div id="content">
             <div class="personal">
                 <div class="personal-img">
+                    <img src="/assets/images/hieu.jpg" alt="">
                 </div>
             </div>
           
@@ -58,6 +63,7 @@
                 </p>
                 <h2 class="u-text">read more</h2>
             </div>
+
             <div class="layout-background">
                 <div class="layout-list">
                     <div class="layout-item">
@@ -67,17 +73,16 @@
                     <div class="layout-item">
                         <img src="./assets/images/ret-min.jpg"class="u-image-2" alt="">
                         <p class="u-text-2">Images from</p>
-                        <a href="#" class="u-button-style"><span>read more</span> </a>
+                        <button  class="u-button-style js-buy-gallery"><span>read more</span> </button>
                     </div>
                 </div>
             </div>
 
-            <div class="details">
+            <div id="detail" class="details">
                 <span class="line">
                     <h2 class="u-text-3">Details</h2>
                 </span>
               
-
                 <div class="detail-row">
                     <div class="detail-row-1">
                         <div class="Education ">
@@ -85,7 +90,7 @@
                             <h4>CAO ĐẲNG THỰC HÀNH FPT POLYTECHNIC [05/2019 - 12/2021]</h4>
                                 <p>Chuyên ngành: Thiết kế Website <br>
                                 Khoa Công Nghệ Thông Tin  <br>
-                                nghiệp loại khá
+                                Tốt nghiệp loại khá
                                 </p>
                         </div>
                         <div class="experience ">
@@ -171,11 +176,93 @@
                </div>
         </div>
     </div>
+    <div class="modal js-modal">
+        <div class="gallery js-gallrey">
+            <div class="image">
+                <a href="assets/images/image-5.jpg" data-lightbox="models" data-title="Caption1">
+                    <span>
+                        <img src="assets/images/image-1.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <div class="image">
+                <a href="assets/images/image-2.jpg" data-lightbox="models" data-title="Caption2">
+                    <span>
+                        <img src="assets/images/image-2.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <div class="image">
+                <a href="assets/images/image-3.jpg" data-lightbox="models" data-title="Caption3">
+                    <span>
+                        <img src="assets/images/image-3.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <div class="image">
+                <a href="assets/images/image-4.jpg" data-lightbox="models" data-title="Caption4">
+                    <span>
+                        <img src="assets/images/image-4.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <div class="image">
+                <a href="assets/images/image-5.jpg" data-lightbox="models" data-title="Caption5">
+                    <span>
+                        <img src="assets/images/image-5.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+            <div class="image">
+                <a href="assets/images/image-6.jpg" data-lightbox="models" data-title="Caption6">
+                    <span>
+                        <img src="assets/images/image-6.jpg" alt=""/>
+                    </span>
+                </a>
+            </div>
+           
+        
+          </div>
+    </div>
+    <script>
+        const buyBtn = document.querySelector('.js-buy-gallery')
+        const modal = document.querySelector('.js-modal')
+        const modalGallrey = document.querySelector('.js-gallrey')
+
+        const mobileMenu = document.getElementById('menu-btn')
+        const wrapper = document.getElementById('footer')
+        
+
+        function showBuyGallery(){
+            modal.classList.add('open')
+        }
+        function hidenBuyGallery(){
+            modal.classList.remove('open')
+        }
+
+        buyBtn.addEventListener('click',showBuyGallery)
+        modal.addEventListener('click', hidenBuyGallery)
+        // modalGallrey.addEventListener('click', function(event){
+        //     // event.stopPropagation()
+        // })
+
+        // menu mobile
+
+        mobileMenu.onclick = function(){
+           nav.classList.toggle('menuMobileOpen')
+        }
+        wrapper.onclick = function(){
+            nav.classList.remove('menuMobileOpen')
+        }
+
+
+    </script>
 
 <body>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/lightbox-plus-jquery.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
 </body>
