@@ -34,13 +34,31 @@
         width: 100%;
         position: relative;
         top: 100%;
-        background-color: gray;
-        height: 300px;
+        background-color: #37384c;
+        height: 181px;
         left: -100%;
         transition: all 0.3s ease;
     }
     #nav >li {
         display: block;
+        border-bottom: 1px solid #aba7a7;
+    }
+    #nav >li:last-child {
+      
+        border-bottom: none;
+    }
+    #nav li a {
+        padding: 0px 30px;     
+    }
+    #nav .subnav{
+        width: 100%;
+        top: 99%;
+        box-shadow: 0 0 3px rgb(5 4 4 / 50%);
+        background-color: #424356;
+    }
+    #nav .subnav a {
+        padding: 5px 40px;
+       
     }
     #content {
         display: none;

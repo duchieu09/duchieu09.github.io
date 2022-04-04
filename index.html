@@ -255,6 +255,24 @@
             nav.classList.remove('menuMobileOpen')
         }
 
+        // tự động đóng khi chọn menu
+        const menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for ( let i = 0; i < menuItems.length; i++){
+            let menuItem = menuItems[i];
+
+            menuItem.onclick = function(event){
+                let isParenMenu = this.nextElementSibling && menuItem.nextElementSibling.classList.contains('subnav');
+
+                if (isParenMenu){
+                    event.preventDefault();
+                }else{
+                    nav.classList.remove('menuMobileOpen')
+
+                }
+                
+
+        }
+        }
 
     </script>
 
