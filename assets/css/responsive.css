@@ -60,10 +60,20 @@
         padding: 5px 40px;
        
     }
-    #content {
-        display: none;
-    }
     .menuMobileOpen{
         left: -17% !important;
+    }
+    #content .personal{
+        padding-top: 50%;
+    }
+    #content .layout-list{
+        display: block;
+    }
+    #content .layout-item img {
+     
+        max-width: 100%;
+    }
+    #detail{
+        display: none;
     }
 }
