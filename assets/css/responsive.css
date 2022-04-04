@@ -64,16 +64,43 @@
         left: -17% !important;
     }
     #content .personal{
-        padding-top: 50%;
+        padding-top: 60%;
     }
     #content .layout-list{
         display: block;
     }
     #content .layout-item img {
-     
         max-width: 100%;
+        padding: 10px 16px;
     }
-    #detail{
-        display: none;
+    #content .layout-img{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #content .u-text-1 {
+        font-size: 2rem;
+        margin-left: 5%;
+    }
+    #content .u-text-2 {
+        margin: 18px 16px;
+    }
+    #content .u-button-style {
+      
+        margin-left: 16px;
+    }
+    #content .detail-row{
+        display: block;
+    }
+    #content .detail-row-1 {
+        width: 455px;
+        max-width: 100%;
+        padding: 16px;
+    }
+    #content .Education {
+        overflow: hidden;
+    }
+    #content .line {
+        margin: 30px 14px;
     }
 }
